@@ -1,99 +1,158 @@
 @import "./app.scss";
 
 .header {
-  background-color: #ffa;
-  // position: relative;
-}
-
-.header_container {
-  padding: $gap-6 0;
-}
-
-// -------header_left--------start
-.header_left_navbar_icon svg {
-  width: 50px;
-  height: 50px;
-}
-
-.header_left_navbar_background {
+  background-color: var(--main-background);
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
-  background-color: rgba(200, 200, 200, .6);
-  transition: .6s;
-  opacity: 0;
-  z-index: -1;
 }
 
-.header_left_navbar_list {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 35vw;
-  height: 100vh;
+.header_container {
+  padding: $gap-8 0;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: $gap-2 0;
-  background-color: var(--second-background);
-  transition: .6s;
-  transform: translateX(-100%);
+}
 
-  label {
-    position: absolute;
-    right: $gap-5;
-    top: $gap-5;
-    font-size: $font-size-1;
-    font-weight: $font-weight-1;
+// -------header_left--------start
+.header_left {
+  .header_left_navbar_icon svg {
+    width: 100px;
+    height: 30px;
   }
 
-  li {
-    font-size: $font-size-3;
-    font-weight: $font-weight-1;
+  .header_left_navbar_background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(200, 200, 200, .6);
+    transition: .6s;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  .header_left_navbar_list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 35vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: $gap-2 0;
+    background-color: var(--second-background);
+    transition: .6s;
+    transform: translateX(-100%);
+
+    label {
+      position: absolute;
+      right: $gap-5;
+      top: $gap-5;
+      font-size: $font-size-1;
+      font-weight: $font-weight-1;
+    }
+
+    li {
+      font-size: $font-size-3;
+      font-weight: $font-weight-1;
+      cursor: pointer;
+    }
+  }
+
+  #header_left_navbar-checkbox {
+    display: none;
+
+    &:checked~.header_left_navbar_container {
+      .header_left_navbar_background {
+        z-index: 1;
+        opacity: 1;
+      }
+
+      .header_left_navbar_list {
+        transform: translateX(0);
+        z-index: 2;
+      }
+    }
+  }
+
+  .header_left_logo {
+    display: none;
+
+    svg {
+      width: 100px;
+      height: 50px;
+    }
+  }
+}
+
+.header_middle {
+
+  .header_middle_logo {
+    svg {
+      width: 100px;
+      height: 50px;
+    }
+  }
+
+  .header_middle_navbar {
+    display: none;
+
+    .header_middle_navbar_list {
+      display: flex;
+      gap: $gap-5;
+
+      li {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.header_right {
+  width: 100px;
+  display: flex;
+  justify-content: space-around;
+
+  svg {
+    width: 25px;
+    height: 25px;
     cursor: pointer;
   }
 }
 
-#header_left_navbar-checkbox {
-  display: none;
+@media screen and (min-width:$rwd-s) {}
 
-  &:checked~.header_left_navbar_container {
-    .header_left_navbar_background {
-      z-index: 1;
-      opacity: 1;
+@media screen and (min-width:$rwd-m) {
+  .header {
+    position: relative;
+  }
+
+  // -------header_left--------start
+  .header_left {
+    .header_left_navbar {
+      display: none;
     }
 
-    .header_left_navbar_list {
-      transform: translateX(0);
-      z-index: 2;
+    .header_left_logo {
+      display: flex;
+    }
+  }
+
+  // -------header_middle--------start
+  .header_middle {
+    .header_middle_logo {
+      display: none;
+    }
+
+    .header_middle_navbar {
+      display: block;
     }
   }
 }
-
-.header_left_logo {
-  display: none;
-
-  svg {
-    width: 100px;
-    height: 50px;
-  }
-}
-
-@media screen and (min-width:$rwd-s) {
-  .header_left_navbar {
-    display: none;
-  }
-
-  .header_left_logo {
-    display: block;
-  }
-}
-
-@media screen and (min-width:$rwd-m) {}
 
 @media screen and (min-width:$rwd-l) {}
-
-// -------header_left--------end

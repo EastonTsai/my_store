@@ -3,6 +3,8 @@ import { useState } from "react"
 import ListItem from "./ListItem"
 import { ReactComponent as Menu_icon } from '../files/icon/🦆 icon _menu_.svg'
 import { ReactComponent as Logo_icon } from '../files/icon/SHOP_logo.svg'
+import { ReactComponent as User_icon } from '../files/icon/🦆 icon _User Circle_.svg'
+import { ReactComponent as Shopping_cart_icon } from '../files/icon/🦆 icon _shopping-cart_.svg'
 
 const dummy = {
   navItem: ['經營理念', '最新消息', '聯絡我們']
@@ -31,10 +33,19 @@ const Header = () => {
           </div>
         </div>
         <div className="header_middle">
-          <div className="header_middle_logo"></div>
-          <div className="header_middle_navbar"></div>
+          <div className="header_middle_logo"><Logo_icon /></div>
+          <div className="header_middle_navbar">
+            <ul className="header_middle_navbar_list">
+              {navItem.map(item =>
+                <ListItem title={item} onClick={() => { }} />)}
+            </ul>
+
+          </div>
         </div>
-        <div className="header_right"></div>
+        <div className="header_right">
+          <Shopping_cart_icon />
+          <User_icon />
+        </div>
       </div>
     </div>
   )
