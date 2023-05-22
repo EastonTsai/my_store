@@ -30,8 +30,8 @@
     height: 100vh;
     background-color: rgba(200, 200, 200, .6);
     transition: .6s;
+    transform: translateX(-100%);
     opacity: 0;
-    z-index: -1;
   }
 
   .header_left_navbar_list {
@@ -69,8 +69,7 @@
 
     &:checked~.header_left_navbar_container {
       .header_left_navbar_background {
-        z-index: 1;
-        opacity: 1;
+        animation: leftNavbarBackground .6s forwards;
       }
 
       .header_left_navbar_list {
@@ -90,6 +89,19 @@
   }
 }
 
+@keyframes leftNavbarBackground {
+  10% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+// -------header_middle------start
 .header_middle {
 
   .header_middle_logo {
@@ -113,6 +125,7 @@
   }
 }
 
+// -------header_right-------start
 .header_right {
   width: 100px;
   display: flex;
