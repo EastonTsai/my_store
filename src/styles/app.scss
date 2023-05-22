@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;500;700&display=swap');
+
+:root {
+  --main-background: #8cf9ff;
+  --second-background: #5aabaf;
+  --third-background: #3c7073;
+  --main-color: #222;
+  --focus-color: #333333;
+  --error-color: #aa0000;
+}
+
+.dark-mode {
+  --main-background: #444;
+  --second-background: #999;
+  --third-background: #bbb;
+  --main-color: #eee;
+  --focus-color: #aaa;
+  --error-color: #aa0000;
+}
+
+$font-size-1: 2rem;
+$font-size-2: 1.75rem;
+$font-size-3: 1.5rem;
+$font-size-4: 1.25rem;
+$font-size-5: 1rem;
+
+$font-weight-1: 700;
+$font-weight-2: 500;
+$font-weight-3: 300;
+$font-weight-4: 100;
+
+$gap-1: 2rem;
+$gap-2: 1.75rem;
+$gap-3: 1.5rem;
+$gap-4: 1.25rem;
+$gap-5: 1rem;
+$gap-6: .75rem;
+$gap-7: .5rem;
+$gap-8: .25rem;
+
+$rwd-s: 480px;
+$rwd-m: 720px;
+$rwd-l: 1024px;
+
+%middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--main-color);
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  max-width: 1440px;
+}
+
+@media screen and (max-width:$rwd-s) {
+  .container {
+    width: 95%;
+  }
+}
+
+
+a {
+  text-decoration: none;
+  color: var(--main-color);
+}
