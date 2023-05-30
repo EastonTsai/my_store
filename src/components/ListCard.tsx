@@ -1,19 +1,29 @@
 
+import { useState, useRef } from 'react'
+
 type props = {
   className: string,
   title: string,
-  image: string,
-  onClick: () => void
+  items?: string[],
 }
 
-
 const ListCard = (props: props) => {
-  const { className, title, image, onClick } = props
+  const { className, title, items } = props
+  const [isShow, setIsShow] = useState(false)
+  const handleClick = () => { }
+
   return (
     <>
-      <div className={className} onClick={onClick}>
-        <img src={image} alt={title} />
-        <div className="title">{title}</div>
+      <div className={className}>
+        <div
+          className='category-title'
+          onClick={() => setIsShow(!isShow)}
+        >{title}
+        </div>
+        <ul className={`category-list ${isShow && 'show'}`}>
+          {items?.map(item =>
+            <li onClick={() => { }}>- {item}</li>)}
+        </ul>
       </div>
     </>
   )

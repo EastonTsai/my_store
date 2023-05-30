@@ -1,7 +1,3 @@
-import 'styles/homePage.scss';
-import Header from "components/Header"
-import ListCard from 'components/ListCard';
-import CategoryList from 'components/CategoryList';
 
 const dummy = {
   hotList: [
@@ -45,15 +41,15 @@ const dummy = {
     },
     {
       title: '女士',
-      products: ['項目', '項目', '項目', '項目', '項目', '項目']
+      products: ['項目', '項目', '項目', '項目', '項目', '項目', '項目', '項目', '項目', '項目']
     },
     {
       title: '童裝',
-      products: ['項目', '項目', '項目', '項目', '項目', '項目']
+      products: ['項目', '項目項目項目項目項目項目', '項目', '項目', '項目', '項目']
     },
     {
       title: '休閒',
-      products: ['項目', '項目', '項目', '項目', '項目', '項目']
+      products: ['項目', '項目', '項目', '項目']
     },
     {
       title: '商務',
@@ -65,7 +61,7 @@ const dummy = {
     },
     {
       title: '鞋款',
-      products: ['項目', '項目', '項目', '項目', '項目', '項目']
+      products: ['項目', '項目', '項目', '項目', '項目', '項目', '項目', '項目', '項目']
     },
     {
       title: '包款',
@@ -74,35 +70,4 @@ const dummy = {
   ]
 }
 
-const HomePage = () => {
-  return (
-    <>
-      <Header />
-      <main className="home_main">
-        <div className="home_main_container container">
-          {/* <div className="home_main_left">
-            <section className="home_main_section">
-              <CategoryList />
-            </section>
-          </div>
-          <div className="home_main_right">
-            <div className="home_main_right_title">
-              TOP
-            </div>
-            <div className="home_main_right_list">
-              {dummy.hotList.map(hot =>
-                <ListCard
-                  key={hot.title}
-                  className='list-card'
-                  title={hot.title}
-                  image={hot.image}
-                  onClick={() => { }}
-                />)}
-            </div>
-          </div> */}
-        </div>
-      </main>
-    </>
-  )
-}
-export default HomePage
+export default dummy

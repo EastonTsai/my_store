@@ -1,0 +1,30 @@
+@import 'styles/app.scss';
+
+.category {
+  border-radius: 8px;
+  aspect-ratio: 1;
+  box-shadow: 0 0 4px var(--grey-2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $gap-5;
+  transition: .5s;
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--main-color);
+    box-shadow: 0 0 5px var(--main-color);
+    transform: scale(1.1);
+  }
+
+  &:hover .category-title {
+    color: var(--main-color);
+  }
+
+}
+
+.category-title {
+  font-size: $font-size-5;
+  color: var(--grey-3);
+  transition: .5s;
+}
