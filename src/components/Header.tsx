@@ -69,6 +69,7 @@ const Header = () => {
                   items={nb.products}
                 />)}
             </div>
+
           </div>
         </div>
       </div>

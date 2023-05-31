@@ -7,16 +7,6 @@
   border-radius: $left $right $right $left;
 }
 
-@mixin position($position, $top, $left, $right, $bottom, $width: none, $height: none) {
-  position: $position;
-  top: $top;
-  left: $left;
-  right: $right;
-  bottom: $bottom;
-  width: $width;
-  height: $height;
-}
-
 .header {
   background-color: rgba(255, 255, 255, .8);
   @include position(fixed, 0, 0, 0, none);
@@ -152,7 +142,6 @@
     max-height: 0px;
 
     li {
-      width: 100%;
       font-size: $font-size-4;
       cursor: pointer;
       transition: .3s;

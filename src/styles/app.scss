@@ -54,6 +54,16 @@ $rwd-l: 1024px;
   align-items: center;
 }
 
+@mixin position($position, $top, $left, $right, $bottom, $width: none, $height: none) {
+  position: $position;
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+  width: $width;
+  height: $height;
+}
+
 * {
   margin: 0;
   padding: 0;

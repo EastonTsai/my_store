@@ -67,6 +67,15 @@ const dummy = {
       title: '包款',
       products: ['項目', '項目', '項目', '項目', '項目', '項目']
     },
+  ],
+  banner: [
+    { image: 'https://picsum.photos/800/400?random=1' },
+    { image: 'https://picsum.photos/600/300?random=2' },
+    { image: 'https://picsum.photos/800/500?random=3' },
+    { image: 'https://picsum.photos/800/400?random=4' },
+    { image: 'https://picsum.photos/600/400?random=5' },
+    { image: 'https://picsum.photos/600/400?random=6' },
+    { image: 'https://picsum.photos/600/400?random=7' },
   ]
 }
 
