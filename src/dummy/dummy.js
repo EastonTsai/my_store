@@ -76,6 +76,74 @@ const dummy = {
     { image: 'https://picsum.photos/600/400?random=5' },
     { image: 'https://picsum.photos/600/400?random=6' },
     { image: 'https://picsum.photos/600/400?random=7' },
+  ],
+  products: [
+    {
+      image: 'https://picsum.photos/300/300?random=10',
+      description: '商品介紹...',
+      info: {
+        price: 99,
+        isSale: false,
+        isLimitedTime: true,
+        isAddPurchase: false,
+        isGiveaway: true,
+      }
+    },
+    {
+      image: 'https://picsum.photos/300/300?random=11',
+      description: '商品介紹...',
+      info: {
+        price: 99,
+        isSale: true,
+        isLimitedTime: true,
+        isAddPurchase: true,
+        isGiveaway: true,
+      }
+    },
+    {
+      image: 'https://picsum.photos/300/300?random=12',
+      description: '商品介紹...',
+      info: {
+        price: 99,
+        isSale: true,
+        isLimitedTime: true,
+        isAddPurchase: false,
+        isGiveaway: false,
+      }
+    },
+    {
+      image: 'https://picsum.photos/300/300?random=13',
+      description: '商品介紹...',
+      info: {
+        price: 99,
+        isSale: false,
+        isLimitedTime: true,
+        isAddPurchase: false,
+        isGiveaway: false,
+      }
+    },
+    {
+      image: 'https://picsum.photos/300/300?random=14',
+      description: '商品介紹...',
+      info: {
+        price: 99,
+        isSale: false,
+        isLimitedTime: false,
+        isAddPurchase: true,
+        isGiveaway: true,
+      }
+    },
+    {
+      image: 'https://picsum.photos/300/300?random=15',
+      description: '商品介紹...',
+      info: {
+        price: 99,
+        isSale: true,
+        isLimitedTime: true,
+        isAddPurchase: false,
+        isGiveaway: true,
+      }
+    },
   ]
 }
 
