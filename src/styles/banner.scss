@@ -1,7 +1,7 @@
 @import 'styles/app.scss';
 
 .main_banner {
-  margin-top: 100px;
+  margin-top: 80px;
   background-color: var(--grey-3);
 }
 
@@ -76,4 +76,10 @@
     background-color: var(--white);
   }
 
+}
+
+@media screen and (min-width:$rwd-s) {
+  .main_banner {
+    margin-top: 0;
+  }
 }

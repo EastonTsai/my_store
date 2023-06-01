@@ -10,6 +10,7 @@
 .header {
   background-color: rgba(255, 255, 255, .8);
   @include position(fixed, 0, 0, 0, none);
+  z-index: 1;
 }
 
 .header_container {
@@ -90,10 +91,10 @@
 
 .header_menu_navbar {
   @include position(fixed, 0, 0, 0, 0);
-  background-color: rgba(50, 50, 50, .8);
+  height: 0;
+  background-color: rgba(50, 50, 50, .9);
   transition: .6s;
   opacity: 0;
-  z-index: -1;
   overflow-y: scroll;
   scrollbar-width: none;
 
@@ -118,8 +119,8 @@
   display: none;
 
   &:checked~.header_menu_navbar {
+    height: 100vh;
     opacity: 1;
-    z-index: 1;
   }
 }
 
@@ -135,6 +136,8 @@
     font-size: $font-size-2;
     margin-bottom: $gap-7;
     text-align: center;
+    color: var(--grey-3);
+    cursor: pointer;
   }
 
   .category-list {
@@ -146,6 +149,12 @@
       cursor: pointer;
       transition: .3s;
       padding-top: $gap-8;
+      color: var(--grey-1);
+
+      &:hover {
+        color: var(--white);
+      }
+
     }
   }
 
@@ -157,7 +166,7 @@
 
 @media screen and (min-width:$rwd-s) {
   .header {
-    display: block;
+    position: relative;
   }
 
   .header_menu {
@@ -201,20 +210,12 @@
 
         .category-title {
           text-align: left;
-          color: var(--grey-3);
+          cursor: default;
         }
       }
 
       .category-list {
         max-height: 100%;
-
-        >li {
-          color: var(--grey-1);
-
-          &:hover {
-            color: var(--white);
-          }
-        }
       }
     }
   }

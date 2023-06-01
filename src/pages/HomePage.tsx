@@ -4,6 +4,7 @@ import 'styles/homePage.scss';
 import Header from "components/Header"
 import Banner from 'components/Banner';
 import ProductCard from 'components/ProductCard';
+import Footer from 'components/Footer';
 
 
 const HomePage = () => {
@@ -25,6 +26,7 @@ const HomePage = () => {
           </div>
         </div>
       </main>
+      <Footer />
     </>
   )
 }

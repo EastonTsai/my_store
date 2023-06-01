@@ -23,7 +23,7 @@ const Header = () => {
   const handleLogin = () => { }
   const handleSearch = () => { }
   return (
-    <div className="header">
+    <header className="header">
       <div className="header_container container">
         <div className="header_logo">
           <Link to='/'><Logo_icon /></Link>
@@ -73,7 +73,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </div>
+    </header>
   )
 }
 export default Header
