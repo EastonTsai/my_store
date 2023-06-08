@@ -1,5 +1,6 @@
 
 import 'styles/productCard.scss';
+import { useNavigate } from 'react-router-dom'
 
 type props = {
   image: string,
@@ -14,8 +15,15 @@ type props = {
 }
 const ProductCard = (props: props) => {
   const { image, description, info } = props
+  const navigate = useNavigate()
+  const handleClick = () => {
+    navigate('/product')
+  }
   return (
-    <div className="product-card">
+    <div
+      className="product-card"
+      onClick={handleClick}
+    >
       <div className="product_image">
         <img src={image} alt={image} />
       </div>

@@ -31,7 +31,7 @@ const Banner = (props: props) => {
           style={{ transform: `translateX(-${isFocus * 100}%)` }}
         >
           {bannerList.map(bl =>
-            <li><img src={bl.image} alt={bl.image} /></li>
+            <li key={bl.image}><img src={bl.image} alt={bl.image} /></li>
           )}
         </div>
         <div className="banner_control">

@@ -1,7 +1,9 @@
 @import 'styles/app.scss';
 
 .product-card {
-  box-shadow: 1px 1px 3px #ccc
+  box-shadow: 1px 1px 3px #ccc;
+  background-color: var(--white);
+  cursor: pointer;
 }
 
 .product_image {

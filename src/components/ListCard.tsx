@@ -21,8 +21,8 @@ const ListCard = (props: props) => {
         >{title}
         </div>
         <ul className={`category-list ${isShow && 'show'}`}>
-          {items?.map(item =>
-            <li onClick={() => { }}>- {item}</li>)}
+          {items?.map((item, index) =>
+            <li key={index} onClick={() => { }}>- {item}</li>)}
         </ul>
       </div>
     </>

@@ -19,8 +19,6 @@ interface navItems {
 const Header = () => {
   const [navItem, setNavItem] = useState<navItems[]>([])
 
-  const handleShoppingCar = () => { }
-  const handleLogin = () => { }
   const handleSearch = () => { }
   return (
     <header className="header">
@@ -33,13 +31,17 @@ const Header = () => {
             <Search_icon />
             <p>搜尋</p>
           </label>
-          <div className="header_menu_shopping-car" onClick={handleShoppingCar}>
-            <Shopping_cart_icon />
-            <p>購物車</p>
+          <div className="header_menu_shopping-car" >
+            <Link to='/cart'>
+              <Shopping_cart_icon />
+              <p>購物車</p>
+            </Link>
           </div>
-          <div className="header_menu_login" onClick={handleLogin}>
-            <User_icon />
-            <p>登入</p>
+          <div className="header_menu_login" >
+            <Link to='/login'>
+              <User_icon />
+              <p>登入</p>
+            </Link>
           </div>
           <label htmlFor="navbar-checkbox">
             <Menu_icon />

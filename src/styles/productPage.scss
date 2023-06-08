@@ -1,0 +1,125 @@
+@import 'styles/app.scss';
+
+%side-page {
+  @include position(fixed, 0, 0, 0, 0, 100%, 100%);
+  z-index: 99;
+  overflow-y: scroll;
+  background-color: #fff;
+  padding-bottom: $gap-2;
+  transform: translateX(100%);
+  transition: .6s;
+}
+
+.product {
+  margin-top: 70px;
+}
+
+.product_detail {
+  .detail_list {
+    margin-top: $gap-4;
+    border-top: 1px solid var(--grey-3);
+
+    >li {
+      padding: $gap-6 0;
+      border-bottom: 1px solid var(--grey-3);
+      position: relative;
+
+      &::after {
+        content: '';
+        @include position(absolute, 50%, none, 10px, none);
+        width: .5rem;
+        height: .5rem;
+        border-top: 3px solid var(--third-background);
+        border-right: 3px solid var(--third-background);
+        transform: rotate(45deg) translateY(-50%);
+      }
+
+      >label {
+        display: block;
+        color: var(--third-background);
+      }
+    }
+  }
+
+  .side-page_picture {
+    @extend %side-page;
+
+    .picture_wrap {
+      width: 95%;
+      margin: auto;
+    }
+
+    img {
+      width: 100%;
+      max-width: 960px;
+      display: block;
+      margin: auto;
+      margin-top: $gap-5;
+    }
+  }
+
+  .side-page_specification {
+    @extend %side-page;
+
+    table {
+      width: 95%;
+      border-collapse: collapse;
+      border: 1px solid #000;
+      margin: auto;
+      margin-top: $gap-2;
+    }
+
+    tr,
+    th {
+      border: 1px solid #000;
+      padding: $gap-7;
+    }
+
+    thead {
+      background-color: var(--grey-3);
+    }
+  }
+}
+
+.back {
+  display: block;
+  background-color: var(--third-background);
+  color: #fff;
+  font-weight: 900;
+  font-size: $font-size-2;
+  padding-left: $gap-2;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  display: none;
+
+}
+
+[id="picture_checkbox"]:checked~.side-page>.side-page_picture {
+  transform: translateX(0);
+  display: block;
+}
+
+[id="specification_checkbox"]:checked~.side-page>.side-page_specification {
+  transform: translateX(0);
+}
+
+@media screen and (min-width: $rwd-s) {
+  .product {
+    margin-top: 0;
+  }
+
+  .product_detail {
+
+    .side-page_picture,
+    .side-page_specification {
+      position: relative;
+      transform: translateX(0);
+    }
+
+    .back {
+      display: none;
+    }
+  }
+}

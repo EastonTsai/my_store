@@ -15,9 +15,9 @@ const HomePage = () => {
         <Banner bannerList={dummy.banner} />
         <div className="products">
           <div className="products_container container">
-            {dummy.products.map(dp =>
+            {dummy.products.map((dp, index) =>
               <ProductCard
-                key={dp.description}
+                key={index}
                 image={dp.image}
                 description={dp.description}
                 info={dp.info}

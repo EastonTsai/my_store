@@ -144,7 +144,32 @@ const dummy = {
         isGiveaway: true,
       }
     },
-  ]
+  ],
+  introduce: {
+    images: [
+      'https://picsum.photos/600/600?random=10',
+      'https://picsum.photos/600/600?random=11',
+      'https://picsum.photos/600/600?random=12',
+      'https://picsum.photos/600/600?random=13',
+      'https://picsum.photos/600/600?random=14',
+      'https://picsum.photos/600/600?random=15',
+    ],
+    content: {
+      feature: ['特色1', '特色2', '特色3',],
+      text: ['說明1', '說明2', '說明3', '說明4'],
+      color: ['002211', '553311', '909033'],
+      transportation: ['宅配', '郵局包裏', '超商取貨'],
+      price: 199,
+      specification: [
+        { title: '材質', content: '铝' },
+        { title: '產地', content: '中國大陸' },
+        { title: '尺寸', content: '35cm X 35cm X 20cm' },
+        { title: '其它', content: '每台電腦螢幕因設定及廠牌不同，皆會影響顯示器的顏色呈現，難免會有色差及個人感官認知的差異， 所以出貨以實際商品顏色為主。' },
+      ]
+    }
+
+  },
+
 }
 
 export default dummy
