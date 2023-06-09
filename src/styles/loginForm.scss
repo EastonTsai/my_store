@@ -1,0 +1,40 @@
+@import 'styles/app.scss';
+
+.login-form,
+.register-form {
+  @extend %middle;
+  flex-direction: column;
+
+  >h1 {
+    text-align: center;
+    color: var(--white);
+    padding: $gap-5 0;
+  }
+
+  label {
+    width: 80%;
+    margin: $gap-6 0;
+  }
+
+  p {
+    color: var(--white);
+    margin-bottom: $gap-8;
+  }
+
+  button {
+    margin-top: 30px;
+    padding: $gap-6;
+    width: 100%;
+    font-size: $font-size-3;
+    font-weight: 700;
+    border: none;
+    background-color: var(--second-background);
+    color: var(--white);
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover {
+      color: var(--black);
+    }
+  }
+}

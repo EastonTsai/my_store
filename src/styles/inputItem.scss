@@ -1,0 +1,20 @@
+@import 'styles/app.scss';
+
+.input-item {
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 8px;
+  display: flex;
+
+  input {
+    flex-grow: 1;
+    padding: $gap-6 ;
+    border: none;
+    background: none;
+
+    &:focus {
+      outline: none;
+    }
+
+  }
+}
