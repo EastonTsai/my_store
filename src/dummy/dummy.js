@@ -169,7 +169,104 @@ const dummy = {
     }
 
   },
-
+  cartList: [
+    {
+      id: 1,
+      image: 'https://picsum.photos/600/600?random=10',
+      introduce: '618限時下殺】LG PuriCare™ 360°超淨化大白空氣清淨機-Hit (AS601HWG0)',
+      price: 9999,
+      quantity: 1,
+      isChecked: false,
+    },
+    {
+      id: 2,
+      image: 'https://picsum.photos/600/600?random=101',
+      introduce: '618限時下殺】LG PuriCare™ 360°',
+      price: 9999,
+      quantity: 1,
+      isChecked: false,
+    },
+    {
+      id: 3,
+      image: 'https://picsum.photos/600/600?random=102',
+      introduce: '618限時下殺】LG PuriCare™ 360°超淨化大白空氣清淨機-Hit (AS601HWG0)',
+      price: 9999,
+      quantity: 1,
+      isChecked: false,
+    },
+    {
+      id: 4,
+      image: 'https://picsum.photos/600/600?random=103',
+      introduce: '618限時下殺】LG PuriCare™ 360°超淨化大白空氣清淨機-Hit (AS601HWG0)',
+      price: 9999,
+      quantity: 1,
+      isChecked: false,
+    },
+    {
+      id: 5,
+      image: 'https://picsum.photos/600/600?random=104',
+      introduce: '618限時下殺】LG PuriCare™ 360°超淨化大白空氣清淨機-Hit (AS601HWG0)',
+      price: 9999,
+      quantity: 1,
+      isChecked: false,
+    },
+    {
+      id: 6,
+      image: 'https://picsum.photos/600/600?random=105',
+      introduce: '618限時下殺】LG PuriCare™ 360°超淨化大白空氣清淨機-Hit (AS601HWG0)',
+      price: 9999,
+      quantity: 1,
+      isChecked: false,
+    },
+    {
+      id: 7,
+      image: 'https://picsum.photos/600/600?random=106',
+      introduce: '618限時下殺】LG PuriCare™ 360°超淨化大白空氣清淨機-Hit (AS601HWG0)',
+      price: 9999,
+      quantity: 1,
+      isChecked: false,
+    },
+    {
+      id: 8,
+      image: 'https://picsum.photos/600/600?random=107',
+      introduce: '618限時下殺】LG PuriCare™ 360°超淨化大白空氣清淨機-Hit (AS601HWG0)',
+      price: 9999,
+      quantity: 1,
+      isChecked: false,
+    },
+    {
+      id: 9,
+      image: 'https://picsum.photos/600/600?random=109',
+      introduce: '360°超淨化大白空氣清淨機-Hit (AS601HWG0)',
+      price: 9999,
+      quantity: 1,
+      isChecked: false,
+    },
+    {
+      id: 10,
+      image: 'https://picsum.photos/600/600?random=1010',
+      introduce: 'LG PuriCare™ 360°超淨化大白空氣清淨機-Hit (AS601HWG0)',
+      price: 9999,
+      quantity: 1,
+      isChecked: false,
+    },
+    {
+      id: 11,
+      image: 'https://picsum.photos/600/600?random=1011',
+      introduce: '618限時下殺】LG PuriCare™ 360°超淨化大白空氣清淨機-Hit (AS601HWG0)',
+      price: 9999,
+      quantity: 1,
+      isChecked: false,
+    },
+    {
+      id: 12,
+      image: 'https://picsum.photos/600/600?random=1012',
+      introduce: '618限時下殺】LG PuriCare™ 360°超淨化大白空氣清淨機-Hit (AS601HWG0)',
+      price: 9999,
+      quantity: 1,
+      isChecked: false,
+    },
+  ]
 }
 
 export default dummy

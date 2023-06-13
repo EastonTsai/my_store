@@ -1,0 +1,19 @@
+@import 'styles/app.scss';
+
+.check-box {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #000;
+  border-radius: 3px;
+  position: relative;
+
+  svg {
+    @include position(absolute, none, 1px, 0, 0, 150%, 150%);
+
+    path {
+      stroke-width: 40px;
+      stroke: var(--third-background);
+    }
+  }
+}

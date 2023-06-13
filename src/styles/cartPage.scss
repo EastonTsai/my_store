@@ -1,0 +1,135 @@
+@import 'styles/app.scss';
+
+%all-check-button {
+  display: flex;
+  align-items: center;
+  gap: $gap-8;
+  cursor: pointer;
+}
+
+
+.cart-page_main {
+  margin-top: 70px;
+  margin-bottom: 100px;
+
+  .header_all-check-button {
+    @extend %all-check-button;
+
+    * {
+      color: var(--white);
+      border-color: var(--white);
+    }
+
+    path {
+      stroke: var(--white);
+    }
+  }
+
+  .main_header {
+    display: flex;
+    padding: $gap-7 ;
+    background-color: var(--third-background);
+
+    >div {
+      text-align: center;
+      color: var(--white);
+    }
+
+    .header_introduce {
+      flex-grow: 1;
+    }
+  }
+
+  .list_item {
+    height: 100px;
+    display: flex;
+    gap: $gap-7;
+    align-items: center;
+    padding: $gap-7;
+
+    &:nth-of-type(even) {
+      background-color: var(--second-background);
+    }
+
+    .check-box {
+      flex-shrink: 0;
+    }
+  }
+
+  .item_introduce {
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: $gap-8;
+
+    img {
+      flex-shrink: 0;
+      height: 100%;
+      aspect-ratio: 1;
+    }
+
+    p {
+      height: 60%;
+      overflow-y: scroll;
+      scrollbar-width: none;
+
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+
+  .item_quantity {
+    width: 60px;
+    flex-shrink: 0;
+    text-align: right;
+  }
+}
+
+.cart-page_footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 $gap-5;
+  padding-left: $gap-7;
+  // border: 2px solid var(--third-background);
+  background-color: #ccc;
+  @include position(fixed, none, 0, 0, 0);
+
+  .footer_all-check-button {
+    @extend %all-check-button;
+  }
+
+  .footer_total {
+    flex-grow: 1;
+    text-align: right;
+  }
+
+  .total-number {
+    color: var(--error-color);
+  }
+
+  .footer_submit {
+    padding: $gap-3 $gap-1;
+    background-color: var(--third-background);
+    color: var(--white);
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width:$rwd-s) {
+  .cart-page_main {
+    margin-top: 0;
+
+    .list_item {
+      height: 130px;
+    }
+
+    .item_quantity {
+      width: 150px;
+    }
+  }
+
+
+}
