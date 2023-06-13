@@ -3,8 +3,8 @@ import 'styles/quantity.scss';
 type props = {
   quantity: number,
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void,
-  clickPlus?: (e: React.MouseEvent<HTMLDivElement>) => void,
-  clickMinus?: (e: React.MouseEvent<HTMLDivElement>) => void,
+  clickPlus?: () => void,
+  clickMinus?: () => void,
 }
 const Quantity = (props: props) => {
   const { quantity, onChange, clickPlus, clickMinus } = props
