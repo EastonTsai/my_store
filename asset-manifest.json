@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/my_store/static/css/main.196b74f0.css",
+    "main.js": "/my_store/static/js/main.df76debc.js",
+    "static/js/787.b80b727d.chunk.js": "/my_store/static/js/787.b80b727d.chunk.js",
+    "static/media/SHOP_logo.svg": "/my_store/static/media/SHOP_logo.676dda7a10431263e7fefc4598e85744.svg",
+    "static/media/🦆 icon _shopping-cart_.svg": "/my_store/static/media/🦆 icon _shopping-cart_.e427584db72259347c3c0acb661acb83.svg",
+    "static/media/🦆 icon _User Circle_.svg": "/my_store/static/media/🦆 icon _User Circle_.8dca392de248b18eb149f41bd3547b83.svg",
+    "index.html": "/my_store/index.html",
+    "static/media/🦆 icon _search_.svg": "/my_store/static/media/🦆 icon _search_.739fb626f5370fd59f4d0f1eab04b7c2.svg",
+    "static/media/🦆 icon _menu_.svg": "/my_store/static/media/🦆 icon _menu_.9ce97a6fb3861182026eb81db377424d.svg",
+    "static/media/🦆 icon _nav arrow left_.svg": "/my_store/static/media/🦆 icon _nav arrow left_.48a7ccf40f5af85d98345a1f32c15166.svg",
+    "static/media/🦆 icon _check_.svg": "/my_store/static/media/🦆 icon _check_.340bf18e02af8c752a52245cc0bd73f6.svg",
+    "static/media/🦆 icon _nav arrow right_.svg": "/my_store/static/media/🦆 icon _nav arrow right_.ff7d2ed56fe554895fc01017a3d1f545.svg",
+    "main.196b74f0.css.map": "/my_store/static/css/main.196b74f0.css.map",
+    "main.df76debc.js.map": "/my_store/static/js/main.df76debc.js.map",
+    "787.b80b727d.chunk.js.map": "/my_store/static/js/787.b80b727d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.196b74f0.css",
+    "static/js/main.df76debc.js"
+  ]
+}
