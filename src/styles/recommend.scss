@@ -1,0 +1,37 @@
+@import 'styles/app.scss';
+
+.recommend {
+  margin-top: $gap-4;
+  padding: $gap-8;
+  background-color: var(--second-background);
+
+  .recommend-title {
+    color: var(--white);
+  }
+
+  .recommend-list {
+    width: 100%;
+    padding: $gap-6 0;
+    display: grid;
+    gap: $gap-7 ;
+    grid-template-columns: repeat(auto-fit, calc(50% - .5rem));
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width:$rwd-s) {
+  .recommend {
+    .recommend-list {
+      gap: $gap-6;
+      grid-template-columns: repeat(auto-fit, calc(33% - .75rem));
+    }
+  }
+}
+
+@media screen and (min-width:$rwd-l) {
+  .recommend {
+    .recommend-list {
+      grid-template-columns: repeat(auto-fit, calc(25% - .75rem));
+    }
+  }
+}

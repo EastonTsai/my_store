@@ -1,158 +1,228 @@
-@import "./app.scss";
+@import 'styles/app.scss';
+
+@mixin search-input($left, $right) {
+  padding: $gap-6;
+  border: none;
+  font-size: 1rem;
+  border-radius: $left $right $right $left;
+}
 
 .header {
-  background-color: var(--main-background);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
+  background-color: rgba(255, 255, 255, .8);
+  @include position(fixed, 0, 0, 0, none);
+  z-index: 1;
 }
 
 .header_container {
-  padding: $gap-8 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  // position: relative;
+  padding: $gap-7 0;
 }
 
-// -------header_left--------start
-.header_left {
-  .header_left_navbar_icon svg {
+.header_logo {
+  svg {
     width: 100px;
-    height: 30px;
-  }
-
-  .header_left_navbar_background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(200, 200, 200, .6);
-    transition: .6s;
-    opacity: 0;
-    z-index: -1;
-  }
-
-  .header_left_navbar_list {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 35vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: $gap-2 0;
-    background-color: var(--second-background);
-    transition: .6s;
-    transform: translateX(-100%);
-
-    label {
-      position: absolute;
-      right: $gap-5;
-      top: $gap-5;
-      font-size: $font-size-1;
-      font-weight: $font-weight-1;
-    }
-
-    li {
-      font-size: $font-size-3;
-      font-weight: $font-weight-1;
-      cursor: pointer;
-    }
-  }
-
-  #header_left_navbar-checkbox {
-    display: none;
-
-    &:checked~.header_left_navbar_container {
-      .header_left_navbar_background {
-        z-index: 1;
-        opacity: 1;
-      }
-
-      .header_left_navbar_list {
-        transform: translateX(0);
-        z-index: 2;
-      }
-    }
-  }
-
-  .header_left_logo {
-    display: none;
-
-    svg {
-      width: 100px;
-      height: 50px;
-    }
+    height: 50px;
   }
 }
 
-.header_middle {
-
-  .header_middle_logo {
-    svg {
-      width: 100px;
-      height: 50px;
-    }
-  }
-
-  .header_middle_navbar {
-    display: none;
-
-    .header_middle_navbar_list {
-      display: flex;
-      gap: $gap-5;
-
-      li {
-        cursor: pointer;
-      }
-    }
-  }
-}
-
-.header_right {
-  width: 100px;
+.header_menu {
   display: flex;
-  justify-content: space-around;
+  gap: $gap-5;
+
+  >label,
+  >.header_menu_shopping-car,
+  >.header_menu_login {
+    text-align: center;
+    cursor: pointer;
+  }
 
   svg {
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  p {
+    display: none;
+  }
+}
+
+.header_menu_search-wrap {
+  @include position(absolute, 100%, 0, 0, none, auto, auto);
+  background-color: var(--third-background);
+  max-height: 0;
+  overflow: hidden;
+  transition: .6s;
+
+  .search-input {
+    width: 90%;
+    max-width: 500px;
+    margin: $gap-6 auto;
+    display: flex;
+  }
+
+  input {
+    @include search-input(8px, 0);
+    flex-grow: 1;
+
+    &:focus {
+      outline: none; //去除預設的藍色邊框
+    }
+  }
+
+  button {
+    @include search-input(0, 8px);
+    width: 10%;
+    min-width: 60px;
     cursor: pointer;
   }
 }
 
-@media screen and (min-width:$rwd-s) {}
+#search-checkbox {
+  display: none;
 
-@media screen and (min-width:$rwd-m) {
-  .header {
-    position: relative;
+  &:checked~.header_menu_search-wrap {
+    max-height: 100%;
+  }
+}
+
+.header_menu_navbar {
+  @include position(fixed, 0, 0, 0, 0);
+  height: 0;
+  background-color: rgba(50, 50, 50, .9);
+  transition: .6s;
+  opacity: 0;
+  overflow-y: scroll;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
   }
 
-  // -------header_left--------start
-  .header_left {
-    .header_left_navbar {
-      display: none;
-    }
+  >label {
+    @include position(fixed, 1.5rem, none, 1.5rem, none, none);
+    font-size: $font-size-1;
+    color: rgba(200, 200, 200, .8);
+    cursor: pointer;
+    transition: .3s;
 
-    .header_left_logo {
-      display: flex;
-    }
-  }
-
-  // -------header_middle--------start
-  .header_middle {
-    .header_middle_logo {
-      display: none;
-    }
-
-    .header_middle_navbar {
-      display: block;
+    &:hover {
+      color: var(--white);
     }
   }
 }
 
-@media screen and (min-width:$rwd-l) {}
+#navbar-checkbox {
+  display: none;
+
+  &:checked~.header_menu_navbar {
+    height: 100vh;
+    opacity: 1;
+  }
+}
+
+.navbar_wrap {
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar-category {
+  >.category-title {
+    font-size: $font-size-2;
+    margin-bottom: $gap-7;
+    text-align: center;
+    color: var(--grey-3);
+    cursor: pointer;
+  }
+
+  .category-list {
+    overflow: hidden;
+    max-height: 0px;
+
+    li {
+      font-size: $font-size-4;
+      cursor: pointer;
+      transition: .3s;
+      padding-top: $gap-8;
+      color: var(--grey-1);
+
+      &:hover {
+        color: var(--white);
+      }
+
+    }
+  }
+
+  .show {
+    max-height: 100%;
+  }
+}
+
+
+@media screen and (min-width:$rwd-s) {
+  .header {
+    position: relative;
+  }
+
+  .header_menu {
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+
+    p {
+      display: block;
+    }
+  }
+
+  .header_logo {
+    svg {
+      width: 150px;
+      height: 65px;
+    }
+  }
+
+  .header_menu_navbar {
+    display: flex;
+  }
+
+  @media screen and (min-width:$rwd-m) {
+    .header_menu_navbar {}
+
+    .navbar_wrap {
+      width: 90%;
+      max-width: 1280px;
+      display: grid;
+      grid-template-columns: repeat(3,
+          33%);
+      align-items: start;
+      grid-row-gap: $gap-5;
+
+      >.navbar-category {
+        // border: 1px solid #000;
+        width: 100%;
+        padding: 0 $gap-6;
+
+        .category-title {
+          text-align: left;
+          cursor: default;
+        }
+      }
+
+      .category-list {
+        max-height: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width:$rwd-l) {
+  .navbar_wrap {
+    grid-template-columns: repeat(4, 25%);
+  }
+}

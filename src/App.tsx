@@ -4,6 +4,8 @@ import { useState } from "react"
 import AdminPage from "./pages/AdminPage"
 import HomePage from "./pages/HomePage"
 import ProductPage from "./pages/ProductPage"
+import CartPage from "pages/CartPage"
+import LoginPage from "pages/LoginPage"
 
 const App = () => {
   const [colorModal, setColorModal] = useState<string>('')
@@ -12,8 +14,10 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path='/admin' element={<AdminPage />} />
-          <Route path='/' element={<HomePage />} />
+          <Route path='/login' element={<LoginPage />} />
           <Route path='/product' element={<ProductPage />} />
+          <Route path='/cart' element={<CartPage />} />
+          <Route path='/' element={<HomePage />} />
         </Routes>
       </BrowserRouter>
     </div>

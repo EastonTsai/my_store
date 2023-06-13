@@ -1,0 +1,36 @@
+@import 'styles/app.scss';
+
+.login-page_main {
+  @extend %middle;
+  padding-top: 100px;
+}
+
+.login-page_main_wrap {
+  background-color: var(--third-background);
+  width: 500px;
+  max-width: 90%;
+  // padding-bottom: 50px;
+
+  input[type="radio"] {
+    display: none;
+
+  }
+
+  .options {
+    display: flex;
+
+    >div {
+      flex: 1;
+      text-align: center;
+      padding: $gap-7 0;
+      background-color: #ccc;
+      color: var(--third-background);
+      cursor: pointer;
+    }
+
+    .active {
+      background: none;
+      color: var(--white)
+    }
+  }
+}

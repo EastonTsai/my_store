@@ -1,0 +1,67 @@
+@import 'styles/app.scss';
+
+.footer {
+  background-color: var(--third-background);
+  margin-top: 50px;
+
+  & * {
+    color: #ccc;
+  }
+}
+
+.footer_container {
+  padding: 40px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: $gap-2 0;
+
+
+}
+
+.footer_title {
+  h2 {
+    font-size: $font-size-2;
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 8px;
+  }
+
+  p {
+    transform: translateX(60px);
+    font-weight: 100;
+  }
+
+}
+
+.footer_technology {
+  font-size: $font-size-4;
+
+  p {
+    display: inline-block;
+    margin: 0 $gap-7;
+  }
+}
+
+.footer_name {
+  text-align: center;
+
+  p {
+    border-bottom: 1px solid #ccc;
+    display: inline-block;
+    padding: 2px 10px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width:$rwd-l) {
+  .footer_container {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 80px 0;
+  }
+
+
+}

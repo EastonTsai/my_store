@@ -1,0 +1,85 @@
+@import 'styles/app.scss';
+
+.main_banner {
+  margin-top: 80px;
+  background-color: var(--third-background);
+}
+
+.banner_container {
+  overflow: hidden;
+  position: relative;
+}
+
+.banner_images {
+  width: 100%;
+  display: flex;
+  transition: .8s;
+
+  li {
+    width: 100%;
+    aspect-ratio: 6/2.5;
+    flex-shrink: 0;
+    overflow: hidden;
+    @extend %middle;
+  }
+
+  img {
+    min-width: 100%;
+    min-height: 100%;
+    vertical-align: middle;
+  }
+}
+
+.banner_control_left {
+  @include position(absolute, 50%, 1rem, none, none);
+}
+
+.banner_control_right {
+  @include position(absolute, 50%, none, 1rem, none);
+}
+
+.banner_control_left,
+.banner_control_right {
+  transform: translateY(-50%);
+  cursor: pointer;
+
+  svg {
+    width: 50px;
+    height: 50px;
+
+    path {
+      stroke: rgba(255, 255, 255, .7);
+      transition: .2s;
+    }
+
+    &:hover path {
+      stroke: var(--white);
+    }
+  }
+}
+
+.banner_control_button {
+  @include position(absolute, none, 0, 0, 1rem);
+  display: flex;
+  justify-content: center;
+  gap: 0 $gap-3;
+
+  .circle {
+    width: 1rem;
+    aspect-ratio: 1;
+    background-color: var(--grey-2);
+    border-radius: 50%;
+    transition: .3s;
+  }
+
+  .focus {
+    background-color: var(--white);
+  }
+
+}
+
+@media screen and (min-width:$rwd-s) {
+  .main_banner {
+    margin-top: 0;
+  }
+}
