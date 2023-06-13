@@ -2,16 +2,17 @@ import "./styles/app.scss"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { useState } from "react"
 import AdminPage from "./pages/AdminPage"
-import HomePage from "./pages/HomePage"
+import LoginPage from "pages/LoginPage"
 import ProductPage from "./pages/ProductPage"
 import CartPage from "pages/CartPage"
-import LoginPage from "pages/LoginPage"
+import HomePage from "./pages/HomePage"
 
+const basename = process.env.PUBLIC_URL
 const App = () => {
   const [colorModal, setColorModal] = useState<string>('')
   return (
     <div className={colorModal}>
-      <BrowserRouter>
+      <BrowserRouter basename={basename}>
         <Routes>
           <Route path='/admin' element={<AdminPage />} />
           <Route path='/login' element={<LoginPage />} />
